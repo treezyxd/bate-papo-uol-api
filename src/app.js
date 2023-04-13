@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 
 let db;
-const mongoClient = new MongoClient(process.env.MONGO_URL);
+const mongoClient = new MongoClient(process.env.DATABASE_URL);
 
 mongoClient.connect()
   .then(() => db = mongoClient.db())
