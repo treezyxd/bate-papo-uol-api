@@ -127,7 +127,7 @@ app.get("/messages", async (req, res) => {
   }
 });
 
-server.post("/status", async (req, res) => {
+app.post("/status", async (req, res) => {
   const { user } = req.headers;
   if (!user) {
     return res.sendStatus(404);
